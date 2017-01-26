@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my APP_DIRS
-    'feed'
+    'feed',
 ]
 
 MIDDLEWARE = [

@@ -36,3 +36,17 @@
 p {
     margin: 0 0 10px;
 }
+.blog-post-title {
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+.sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
