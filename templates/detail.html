@@ -12,15 +12,24 @@
         <p>{{ article.contents }}</p>
       </div>
       <div>
-        {%for comment in article.article_comments.all%}
-          {{comment.username}}:{{comment.content}}
-        {%endfor%}
+        {% for comment in article.article_comments.all %}
+          <div>{{comment.username}} : {{comment.content}}</div>
+        {% endfor %}
       </div>
-      <div>
-        <form>
-          <input name="username"/>
-          <input name="content"/>
-          <button>댓글 달기</button>
+      <div class="reply-form">
+        <form class="form-inline" method="post" action="">
+          {% csrf_token %}
+          <div>
+            <div class="form-group">
+              <input placeholder="ID" class="form-control" name="username" />
+            </div>
+            <div class="form-group">
+              <input placeholder="내용"class="form-control" name="content" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-defualt" type="submit">댓글 달기</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
