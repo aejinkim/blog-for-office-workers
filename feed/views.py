@@ -48,9 +48,12 @@ def index(request):
 
 def detail(request, article_id):
     article = Article.objects.get(id=article_id)
+    # comment_list = Comment.objects.filter(article__id=article_id)
+    comment_list = article.article_comment.all()
     hashtag_list = HashTag.objects.all()
     ctx = {
         "article" : article,
+        "comment_list" : comment_list,
         "hashtag_list" : hashtag_list,
     }
     return render(request, 'detail.html', ctx)

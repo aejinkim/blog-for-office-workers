@@ -11,6 +11,18 @@
       <div class="blog-post">
         <p>{{ article.contents }}</p>
       </div>
+      <div>
+        {%for comment in article.article_comments.all%}
+          {{comment.username}}:{{comment.content}}
+        {%endfor%}
+      </div>
+      <div>
+        <form>
+          <input name="username"/>
+          <input name="content"/>
+          <button>댓글 달기</button>
+        </form>
+      </div>
     </div>
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
       <div class="sidebar-module">
