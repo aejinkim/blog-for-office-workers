@@ -52,4 +52,28 @@ p {
 }
 .reply-form{
     margin-top: 20px;
+    background-color: #4343433;
+}
+
+.blog-post > p{
+  font-size: 20px;
+  color: #112D4E;
+}
+.comment-style{
+  font-size: 16px;
+  margin-top: 80px;
+}
+
+
+.comment-title{
+  color:#1891AC;
+  margin-top: -20px;
+  font-weight: bold;
+}
+.comment-inline{
+  display: inline;
+}
+.comment-id{
+  font-weight: bold;
+  color:#666666;
 }
